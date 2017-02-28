@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>xyz</title>
+  <style>
+  p {
+    color: blue;
+    margin: 8px;
+
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+ Name:
+<input type="text" name="name" id="x">
+
+Email:
+<input type="text" name="Email" id="y">
+
+Comment:
+<input type="textarea" rows="10" cols="30" id="z">
+<p id="x1"></p>
+<p id="y1"></p>
+ <p id="z1"></p>
+
+<script>
+$( "input" )
+  .keyup(function() {
+    console.log(event);
+    var value = $(this).val();
+
+    $("p[id="+event.target.id+"1]").text( value );
+  })
+ 
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+         <script>
+         
+         $(document).ready(function(){
+				var con=$(".container");
+
+         	$(".adu").click(function(){
+         	
+         		$(".container").append('<div class="inside"><input type="text" name="firstname"><input type="text" name="lastname"><input type="number" name="contact"><button class="del">delete</button><br></div>');
+         	});
+
+         
+$(con).on("click",".del",function(){
+	
+	$(this).parent().remove();
+});
+
+	});
+
+         
+	</script>
+
+
+
+	<style type="text/css">
+		.sty{
+
+			border:1px solid black;
+		
+			padding-left: 58px;
+			padding-right: 54px;
+
+		}
+		.sty1{
+
+			border:1px solid black;
+		
+			padding-left: 58px;
+			padding-right: 53px;
+
+		}
+		.sty2{
+
+			border:1px solid black;
+		
+			padding-left: 58px;
+			padding-right: 51px;
+
+		}
+	</style>
+</head>
+<body>
+
+	<button id="au" class="adu">ADD USER</button>
+	<div class="container">
+		<span class="sty">firstname</span>
+		<span class="sty1">lastname</span>
+		<span class="sty2">contactNo</span>
+	</div>
+	
+
+</body>
+</html>
